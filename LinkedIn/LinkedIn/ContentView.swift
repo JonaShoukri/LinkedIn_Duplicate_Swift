@@ -8,15 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var selectedTab = 0
+    
     var body: some View {
-        ZStack {
-            Color(.lightGray)
-                    .ignoresSafeArea()
+        TabView(selection: $selectedTab) {
+            // Home Tab
+            HomeScreenView()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Home")
+                }
+                .tag(0)
             
-            VStack {
-                HeaderView()
-                PostView()
-            }
+            // Network Tab
+            NetworkScreenView()
+                .tabItem {
+                    Image(systemName: "network")
+                    Text("Network")
+                }
+                .tag(0)
         }
     }
 }

@@ -44,6 +44,7 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DD22E4C32CB9DFAF0078513F /* Model */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Model; sourceTree = "<group>"; };
 		DD22E4E42CB9EBBB0078513F /* HomeScreenViews */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = HomeScreenViews; sourceTree = "<group>"; };
+		DD22E5142CBC732D0078513F /* NetworkScreenView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = NetworkScreenView; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		DDF842A52CB702C200061F88 /* LinkedIn */ = {
 			isa = PBXGroup;
 			children = (
+				DD22E5142CBC732D0078513F /* NetworkScreenView */,
 				DD22E4E42CB9EBBB0078513F /* HomeScreenViews */,
 				DD22E4C32CB9DFAF0078513F /* Model */,
 				DDF842A62CB702C200061F88 /* LinkedInApp.swift */,
@@ -129,6 +131,7 @@
 			fileSystemSynchronizedGroups = (
 				DD22E4C32CB9DFAF0078513F /* Model */,
 				DD22E4E42CB9EBBB0078513F /* HomeScreenViews */,
+				DD22E5142CBC732D0078513F /* NetworkScreenView */,
 			);
 			name = LinkedIn;
 			productName = LinkedIn;

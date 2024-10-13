@@ -8,22 +8,24 @@
 import SwiftUI
 
 struct PostView: View {
+    let post: Post
+    
     var body: some View {
         HStack {
             VStack{
                 HStack{
-                    Image("demo")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 70, height: 70)
-                                .clipShape(Circle())
-                                .clipped()
+                    Image(post.profilePicture)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 70, height: 70)
+                        .clipShape(Circle())
+                        .clipped()
 
                     VStack (alignment: .leading) {
-                        Text("Name")
-                        Text("XXX followers")
+                        Text(post.name)
+                        Text("\(post.followerCount) followers")
                             .font(.system(size: 15))
-                        Text("8 min")
+                        Text(post.time)
                             .font(.system(size: 10))
                         
                     }
@@ -36,13 +38,14 @@ struct PostView: View {
                 }
                 
                 HStack{
-                    Text("Hello, world!")
+                    Text(post.description)
                     Spacer()
                 }
                 
                 HStack{
-                    Image("demo")
+                    Image(post.image)
                         .resizable()
+                        .aspectRatio(contentMode: .fit)
                 }
                 
                 Divider()
@@ -85,5 +88,5 @@ struct PostView: View {
 }
 
 #Preview {
-    PostView()
+    PostView(post: Post(id: 0, profilePicture: "00", name: "Sample Name", followerCount: 300, time: "10 min", description: "This is a sample post.", image: "demo"))
 }
