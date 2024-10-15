@@ -9,7 +9,15 @@ import SwiftUI
 
 struct NetworkScreenView: View {
     var body: some View {
-        Text("NetworkScreenView")
+        ZStack {
+            Color(.lightGray)
+                    .ignoresSafeArea()
+            
+            ScrollView {
+                NetworkHeaderView()
+                InvitationListView()
+            }
+        }
     }
 }
 
